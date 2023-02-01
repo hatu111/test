@@ -1,82 +1,39 @@
-.container{
-    overflow: hidden;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    padding: 90px;
-  }
-  
-  .draggable {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    width: 150px;
-    height: 100px;
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 39px;
-    font-weight: 600;
-    color: #fff;
-    border-radius: 10%;
+.drag{
+  display: grid;
+  place-items: center;
+  width: 140px;
+  height: 120px;
+  border-radius: 10px;
+  touch-action: none;
+  user-select: none;
+  margin: 10px
+}
+ 
+.drag {
+  background: skyblue;
+}
+
+.drop2,
+.drop {
+    display: grid;
+    place-items: center;
+    width: 800px;
+    height: 300px;
+    border-radius: 10px;
     touch-action: none;
     user-select: none;
+    margin: 10px
   }
-  
-  .draggable-1{
-    background: #81cf7a;
-  }
-  
-  .draggable-2{
-    background: #25bdcf;
-    margin-left: 60px;
-  }
+ 
+.drop {
+    background: palegreen;
+}
 
-  .draggable-3{
+.drop2 {
     background: pink;
-    margin-left: 60px;
-  }
-  
-  .info{
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 100%;
-    background: #fff;
-    user-select: none;
-  }
-
-  
+}
+ 
+.drag.active {
+  background: navy;
+  color: white;
+}
